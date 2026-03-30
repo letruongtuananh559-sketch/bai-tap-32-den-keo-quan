@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đèn Kéo Quân 3D - Tuấn Anh</title>
+    <link rel="stylesheet" href="style-den.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hiệu Ứng Đèn Kéo Quân 3D</h1>
+        <div class="scene">
+            <div class="cube" id="denKeoQuan">
+                <div class="face front"><img src="anh1.jpg" alt="1"></div>
+                <div class="face back"><img src="anh2.jpg" alt="2"></div>
+                <div class="face right"><img src="anh3.jpg" alt="3"></div>
+                <div class="face left"><img src="anh4.jpg" alt="4"></div>
+                <div class="face top"><img src="anh5.jpg" alt="5"></div>
+                <div class="face bottom"><img src="anh6.jpg" alt="6"></div>
+            </div>
+        </div>
+        <p>Rê chuột vào đèn để dừng lại, rà ra để quay tiếp</p>
+        <a href="index.html" class="btn-back">Quay lại Portfolio</a>
+        <a href="denkeoquan.html">Xem bài tập Đèn Kéo Quân</a>
+    </div>
+
+    <script>
+        const den = document.getElementById('denKeoQuan');
+        
+        // Sự kiện dừng khi rê chuột vào
+        den.addEventListener('mouseenter', () => {
+            den.style.animationPlayState = 'paused';
+        });
+
+        // Sự kiện quay tiếp khi rê chuột ra
+        den.addEventListener('mouseleave', () => {
+            den.style.animationPlayState = 'running';
+        });
+    </script>
+</body>
+</html>
